@@ -1,0 +1,41 @@
+.Days {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
+  .Day {
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    background-color: rgb(233, 224, 224);
+    margin-bottom: 20px;
+    border-radius: 30px;
+    color: rgb(0, 4, 10);
+    padding: 20px;
+
+    .date {
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .icon {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+
+    .details {
+      font-weight: 800;
+      border-bottom: 2px solid #000;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Days {
+    .Day {
+      height: 230px;
+    }
+  }
+}

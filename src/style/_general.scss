@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.btn {
+  padding: 10px;
+  background-color: rgb(20, 31, 159);
+  border: none;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: #fff;
+}

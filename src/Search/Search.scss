@@ -1,0 +1,38 @@
+.location-input {
+  width: 60%;
+  padding: 10px 2px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  text-transform: capitalize;
+
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+.submit-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px 30px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  color: #000;
+  border-top-right-radius: 30px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgb(89, 107, 184);
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .submit-btn {
+    border-radius: 0 !important;
+  }
+}

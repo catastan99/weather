@@ -1,0 +1,133 @@
+.Container {
+  height: 680px;
+  width: 80%;
+  background-color: rgba(32, 60, 94, 0.384);
+  color: #fff;
+  border-radius: 30px;
+  display: flex;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+
+  .left-side {
+    background: url("../assets/images/wood-gfeeb48fa6_1280.jpg");
+    background-size: cover;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    .current-weather {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .temperature {
+        font-size: 90px;
+        font-weight: 900;
+        padding: 0 5px;
+      }
+
+      .location-and-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .city {
+          font-size: 40px;
+          text-align: center;
+        }
+
+        .date {
+          font-size: 15px;
+          font-weight: 800;
+        }
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .right-side {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    padding: 1rem 1.5rem 1rem 2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Container {
+    width: 95%;
+
+    .current-weather {
+      flex-direction: column;
+
+      .location-and-date {
+        .city {
+          font-size: 65px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Container {
+    flex-direction: column;
+    height: auto;
+
+    .current-weather {
+      display: grid;
+
+      .location-and-date {
+        .city {
+          font-size: 85px !important;
+        }
+      }
+    }
+
+    .left-side,
+    .right-side {
+      width: 100%;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 0;
+    }
+
+    .left-side {
+      height: 50%;
+      background: none;
+
+      .current-weather {
+        align-items: center;
+        .temperature {
+          font-size: 60px;
+        }
+
+        .city {
+          font-size: 50px !important;
+        }
+      }
+    }
+
+    .right-side {
+      height: 60%;
+      overflow: visible;
+    }
+  }
+}
